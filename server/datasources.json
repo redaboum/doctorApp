@@ -6,11 +6,11 @@
   "mongoDB": {
     "host": "localhost",
     "port": 27017,
-    "url": "mongodb://myTester:xyz123@localhost:27017/blog",
+    "url": "mongodb://reda:reda@localhost:27017/blog",
     "database": "blog",
-    "password": "xyz123",
+    "password": "reda",
     "name": "mongoDB",
-    "user": "myTester",
+    "user": "reda",
     "connector": "mongodb"
   }
 }

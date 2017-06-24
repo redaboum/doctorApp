@@ -1,0 +1,15 @@
+To start mongodb server launch the following line :
+
+mongod --port 27017 --dbpath /path/to/db
+
+Then add a user
+
+use blog
+db.createUser(
+  {
+    user: "reda",
+    pwd: "reda",
+    roles: [ { role: "readWrite", db: "blog" },
+             { role: "read", db: "reporting" } ]
+  }
+)

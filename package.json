@@ -19,6 +19,7 @@
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "findup-sync": "^0.1.2",
     "history": "^1.9.0",
     "humps": "^0.6.0",
     "isomorphic-fetch": "^2.1.1",
@@ -30,11 +31,13 @@
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-mongodb": "^3.1.0",
     "loopback-datasource-juggler": "^2.39.0",
+    "material-ui": "^0.18.3",
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
     "react-redux": "^2.1.2",
     "redux": "^3.0.0",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+    "webfont-loader": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^5.6.18",
