@@ -10,16 +10,6 @@ const style = {
   margin: 12,
 };
 
-const center={
-  // "display": "flex",
-  // flexDirection: "column",
-  // justifyContent: "center",
-}
-
-const sonStyle = {
-  "justifyContent": "center",
-}
-
 class HighForm extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +21,7 @@ class HighForm extends Component {
 
   render() {
     return (
-      <div style={center} >
+      <div>
           <TextInput indicator="Titre"/>
           <div style={{display: "flex"}}>
             <TextInput indicator="Pathologie"/>
