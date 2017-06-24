@@ -14,7 +14,7 @@ class GlobalForm extends Component {
     super(props);
     this.state = {
       show:false
-    }
+    };
   }
 
   componentWillMount() {
@@ -22,14 +22,13 @@ class GlobalForm extends Component {
   }
 
   showClick(){
-    console.log("coucou");
-    // this.setState({show: !this.state.show});
+    this.setState({show: !this.state.show});
   }
 
   render() {
     return (
       <div>
-        <HighForm afterClick={this.showClick.bind(this)} />
+        <HighForm showClick={this.showClick.bind(this)} />
         { this.state.show ? <LowForm /> : null }
       </div>
     );

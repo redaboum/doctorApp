@@ -3,8 +3,7 @@ import 'babel-core/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import HighForm from './containers/HighForm';
-import LowForm from './containers/LowForm';
+import GlobalForm from './containers/GlobalForm';
 import configureStore from './store/configureStore';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import theme from './theme';
@@ -15,8 +14,7 @@ ReactDOM.render(
   <MuiThemeProvider muiTheme={theme}>
     <Provider store={store}>
       <div>
-    		<HighForm />
-        <LowForm />
+    		<GlobalForm />
       </div>
     </Provider>
   </MuiThemeProvider>,
