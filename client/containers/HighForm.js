@@ -29,6 +29,10 @@ class HighForm extends Component {
 		this.props.dispatch(getStarted());
 	}
 
+	dmb() {
+		console.log(this.props);
+	}
+
 	render() {
 		return (
 			<div style={center} >
@@ -36,7 +40,7 @@ class HighForm extends Component {
 					<TextInput indicator="Pathologie"/>
 					<TextInput indicator="Présentation clinique"  />
 					<TextInput indicator="Recommendation pour la prise en charge" style={{width: 700}} multiLine={true}/>
-				<RaisedButton label="Créer une ordonnance" primary={true} style={style}/>
+				<RaisedButton label="Créer une ordonnance" primary={true} style={style} onClick={this.dmb}/>
 			</div>
 		);
 	}
