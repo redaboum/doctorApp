@@ -1,0 +1,3 @@
+pm2 start npm -- start ==> launch the daemon
+pm2 list ==> shows the daemon
+pm2 stop id/all ==> stop a given process

@@ -10,7 +10,13 @@ const style = {
 };
 
 const center={
-	// backgroundColor: "white",
+	// "display": "flex",
+	// flexDirection: "column",
+	// justifyContent: "center",
+}
+
+const sonStyle = {
+	"justifyContent": "center",
 }
 
 class SmartComponent extends Component {
@@ -25,21 +31,11 @@ class SmartComponent extends Component {
 	render() {
 		return (
 			<div style={center} >
-				<div>
-					<TextInput indicator="Spécialité" />
-				</div>
-				<div>
-					<TextInput indicator="Pathologie" />
-				</div>
-				<div>
-					<TextInput indicator="Présentation clinique" />
-				</div>
-				<div>
+					<TextInput indicator="Spécialité"/>
+					<TextInput indicator="Pathologie"/>
+					<TextInput indicator="Présentation clinique"  />
 					<TextInput indicator="Recommendation pour la prise en charge" style={{width: 700}} multiLine={true}/>
-				</div>
-				<div>
-				<RaisedButton label="Créer une ordonnance" primary={true} style={style} />
-				</div>
+				<RaisedButton label="Créer une ordonnance" primary={true} style={style}/>
 			</div>
 		);
 	}
