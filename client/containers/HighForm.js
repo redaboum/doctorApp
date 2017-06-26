@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TextInput from '../components/formComponents/TextInput';
-// import SelectInput from '../components/formComponents/SelectInput';
+import SelectInput from '../components/formComponents/SelectInput';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
@@ -16,7 +16,7 @@ class HighForm extends Component {
 	render() {
 		return (
 			<div>
-					<TextInput indicator="Spécialité"/>
+					<SelectInput indicator="Spécialité"/>
 					<TextInput indicator="Pathologie"/>
 					<TextInput indicator="Présentation clinique"  />
 					<TextInput indicator="Recommendation pour la prise en charge" style={{width: 700}} multiLine={true}/>

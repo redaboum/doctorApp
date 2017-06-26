@@ -4,13 +4,9 @@ import MenuItem from 'material-ui/MenuItem';
 
 
 const styleDisp = {
-  "display": "inline-block",
-  margin: 15,
+  "display": "flex",
+  flexDirection: "row",
   fontFamily: "Roboto",
-}
-
-const large = {
-  width: "100px",
 }
 
 export default class SelectFieldCustom extends Component {
@@ -25,15 +21,18 @@ export default class SelectFieldCustom extends Component {
   }
 
 
-  // handleChange = (event, index, value) => this.setState({value: value});
+  handleChange(event, index, value) {
+    this.setState({value: value});
+  }
 
   render() {
     return (
-      <div>
-        <p style={styleDisp}>{this.props.indicator}</p>
+      <div style={styleDisp}>
+        <p style={{margin: 15}} >{this.props.indicator}</p>
         <SelectField
           value={this.state.value}
-          onChange={this.handleChange}
+          onChange={this.handleChange.bind(this)}
+          style = {{marginLeft: 15}}
         >
           <MenuItem value={1} primaryText="Never" />
           <MenuItem value={2} primaryText="Every Night" />

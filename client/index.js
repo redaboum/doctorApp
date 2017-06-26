@@ -7,6 +7,9 @@ import GlobalForm from './containers/GlobalForm';
 import configureStore from './store/configureStore';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import theme from './theme';
+import injectTapEventPlugin from "react-tap-event-plugin";
+
+injectTapEventPlugin();
 
 const store = configureStore();
 
