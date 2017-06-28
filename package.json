@@ -1,5 +1,5 @@
 {
-  "name": "loopback-redux-react-boilerplate",
+  "name": "doctorApp",
   "version": "1.0.2",
   "main": "server/server.js",
   "scripts": {
@@ -59,5 +59,5 @@
     "type": "git",
     "url": "https://github.com/tngan/loopback-redux-react-boilerplate"
   },
-  "description": "A boilerplate for a Redux-React application using LoopBack"
+  "description": "An app for all the doctors"
 }
