@@ -1,0 +1,47 @@
+{
+  "name": "Molecule",
+  "plural": "Molecules",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Dci": {
+      "type": "string",
+      "required": true
+    },
+    "Dose": {
+      "type": "number",
+      "required": true
+    },
+    "GalenicForme": {
+      "type": "string",
+      "required": true
+    },
+    "Number": {
+      "type": "number",
+      "required": true
+    },
+    "GalenicForm2": {
+      "type": "string",
+      "required": true
+    },
+    "takenNumber": {
+      "type": "number",
+      "required": true
+    },
+    "numberOfDays": {
+      "type": "number",
+      "required": true
+    },
+    "ordonnanceId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
