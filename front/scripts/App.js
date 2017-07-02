@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history'
 
 import theme from './theme';
 import GlobalForm from './pages/GlobalForm';
-import LowForm from './pages/LowForm';
+import addMolecules from './pages/addMolecules';
 
 const history = createBrowserHistory();
 
@@ -16,7 +16,7 @@ class App extends Component{
         <Router history={ history }>
           <div>
             <Route exact path="/" component={ GlobalForm } />
-            <Route path="/ordonnance" component={ LowForm } />
+            <Route path="ordonnance/:id" component={ addMolecules } />
           </div>
         </Router>
       </MuiThemeProvider>

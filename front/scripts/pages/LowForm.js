@@ -6,7 +6,7 @@ const style = {
   margin: 12,
 };
 
-class HighForm extends Component {
+class LowForm extends Component {
   constructor(props) {
     super(props);
   }
@@ -33,4 +33,4 @@ class HighForm extends Component {
   }
 }
 
-export default HighForm;
+export default LowForm;

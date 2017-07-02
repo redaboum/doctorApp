@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TextInput from './components/TextInput';
 import SelectInput from './components/SelectInput';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import { postOrdonnance } from '../services/getApi';
 import {withRouter} from "react-router-dom";
 
 
@@ -16,7 +16,9 @@ class HighForm extends Component {
 	}
 
 	clickNext = ()=>{
-		this.props.history.push("/ordonnance");
+		const body = postOrdonnance("test","test","test","test");
+		console.log(body);
+		this.props.history.push("/ordonnance/123");
 	};
 
 	render() {
