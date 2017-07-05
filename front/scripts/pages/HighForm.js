@@ -13,9 +13,19 @@ const style = {
 class HighForm extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			speciality: null,
+			pathology: null,
+			clinical: null,
+			recommendation: null,
+		}
 	}
 
-	clickNext = ()=>{
+	// setSpeciality = () => {
+
+	// }
+
+	clickNext = () => {
 		const body = postOrdonnance("test","test","test","test");
 		console.log(body);
 		this.props.history.push("/ordonnance/123");
