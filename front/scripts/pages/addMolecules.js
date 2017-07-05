@@ -11,7 +11,7 @@ class addMolecules extends Component {
     console.log(this.props);
     return (
       <div>
-          <h2>  </h2>
+          <h2> Coucou </h2>
           <LowForm />
       </div>
     );

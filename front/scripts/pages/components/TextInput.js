@@ -15,11 +15,16 @@ class TextInput extends Component {
   constructor(props) {
     super(props);
   }
+
+  test = (e) => {
+    console.log(e.target.value);
+  }
+
   render() {
     return (
       <div>
         <p style={styleDisp}>{this.props.indicator}</p>
-        <TextField hintText={this.props.indicator} style={this.props.style} multiLine={this.props.multiLine} />
+        <TextField hintText={this.props.indicator} style={this.props.style} multiLine={this.props.multiLine} onChange={this.props.setFunction}/>
       </div>
     );
   }

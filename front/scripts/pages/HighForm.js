@@ -21,23 +21,38 @@ class HighForm extends Component {
 		}
 	}
 
-	// setSpeciality = () => {
+	setSpeciality = (speciality) => {
+		this.setState({speciality: speciality});
+	};
 
-	// }
+	setPathology = (pathology) => {
+		console.log(pathology.target.value);
+		this.setState({pathology: pathology.target.value});
+	};
+
+	setClinical = (clinical) => {
+		this.setState({clinical: clinical.target.value});
+	};
+
+	setRecommendation = (recommendation) => {
+		this.setState({recommendation: recommendation.target.value});
+	};
 
 	clickNext = () => {
-		const body = postOrdonnance("test","test","test","test");
+		const body = postOrdonnance(this.state.speciality,this.state.pathology,this.state.clinical,this.state.recommendation);
 		console.log(body);
 		this.props.history.push("/ordonnance/123");
 	};
 
 	render() {
+		console.log(this.state.speciality);
+		console.log(this.state.clinical);
 		return (
 			<div>
-					<SelectInput indicator="Spécialité"/>
-					<TextInput indicator="Pathologie"/>
-					<TextInput indicator="Présentation clinique"  />
-					<TextInput indicator="Recommendation pour la prise en charge" style={{width: 700}} multiLine={true}/>
+					<SelectInput indicator="Spécialité" setFunction={this.setSpeciality}/>
+					<TextInput indicator="Pathologie" setFunction={this.setPathology} />
+					<TextInput indicator="Présentation clinique" setFunction={this.setClinical} />
+					<TextInput indicator="Recommendation pour la prise en charge" style={{width: 700}} multiLine={true} setFunction={this.setRecommendation} />
 					<RaisedButton label="Créer une ordonnance" primary={true} style={style} onClick={this.clickNext}/>
 			</div>
 		);

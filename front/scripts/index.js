@@ -9,6 +9,9 @@ import { createBrowserHistory } from 'history'
 import App from './App';
 import theme from './theme';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 const history = createBrowserHistory();
 
 render(

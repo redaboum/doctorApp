@@ -23,6 +23,7 @@ export default class SelectFieldCustom extends Component {
 
   handleChange(event, index, value) {
     this.setState({value: value});
+    this.props.setFunction(value);
   }
 
   render() {
