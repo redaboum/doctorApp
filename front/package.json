@@ -1,7 +1,6 @@
 {
-  "name": "react-es6-webpack-boilerplate",
+  "name": "doctorApp",
   "version": "5.0.0",
-  "description": "Boilerplate for kick starting a React Project with ES6 (Babel) and Hot reloader using Webpack.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -27,11 +26,10 @@
   "homepage": "https://github.com/vasanthk/react-es6-webpack-boilerplate",
   "dependencies": {
     "babel-runtime": "^6.20.0",
-    "material-ui": "^0.18.5",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
+    "material-ui": "^0.18.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^3.0.5",
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
