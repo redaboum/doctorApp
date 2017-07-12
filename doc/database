@@ -13,3 +13,23 @@ db.createUser(
              { role: "read", db: "reporting" } ]
   }
 )
+
+use blog
+db.createUser(
+  {
+    user: "reda",
+    pwd: "reda",
+    roles: [ { role: "readWrite", db: "blog" },
+             { role: "read", db: "reporting" } ]
+  }
+)
+
+db.createUser(
+... {
+... user: "reda",
+... pwd: "reda",
+... roles: [{role: "userAdminAnyDatabase", db: "admin"}]
+... }
+... )
+
+docker run -p 27017:27017 -v ../database:/data/db --name my-mongo-dev -d mongo mongod --auth
