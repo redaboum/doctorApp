@@ -32,4 +32,4 @@ db.createUser(
 ... }
 ... )
 
-docker run -p 27017:27017 -v ../database:/data/db --name my-mongo-dev -d mongo mongod --auth
+docker run -p 27017:27017 -v /../database:/data/db --name my-mongo-dev -d mongo mongod --auth
