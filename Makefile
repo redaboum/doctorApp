@@ -12,3 +12,6 @@ database-stop:
 
 deploy:
 	ssh -i "test_amazon.pem" ubuntu@ec2-54-200-64-111.us-west-2.compute.amazonaws.com "cd doctorApp && git pull -f && pm2 stop all && cd front && yarn install && pm2 start npm -- start && cd .. && cd back && yarn install && cd server && pm2 start server.js"
+
+connect-server:
+	ssh -i "test_amazon.pem" ubuntu@ec2-54-200-64-111.us-west-2.compute.amazonaws.com
