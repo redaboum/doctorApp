@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiBaseUrl = 'http://localhost:3000/api/'
+const apiBaseUrl = 'http://ec2-54-200-64-111.us-west-2.compute.amazonaws.com:3000/api/'
 
 export const postOrdonnance = (speciality, pathology, clinicalP, Recommandation, id, router) =>{
   console.log("tag");
