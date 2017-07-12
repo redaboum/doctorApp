@@ -18,6 +18,7 @@ class HighForm extends Component {
 			pathology: null,
 			clinical: null,
 			recommendation: null,
+			id: null,
 		}
 	}
 
@@ -39,9 +40,14 @@ class HighForm extends Component {
 	};
 
 	clickNext = () => {
-		const body = postOrdonnance(this.state.speciality,this.state.pathology,this.state.clinical,this.state.recommendation);
-		console.log(body);
-		this.props.history.push("/ordonnance/123");
+		postOrdonnance(
+			this.state.speciality,
+			this.state.pathology,
+			this.state.clinical,
+			this.state.recommendation,
+		 	this.state.id, this.props.router);
+		// console.log(this.state.id);
+		// this.props.router.push("/ordonnance/123/molecules");
 	};
 
 	render() {

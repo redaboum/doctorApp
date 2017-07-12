@@ -13,9 +13,8 @@ class App extends Component{
     return (
       <MuiThemeProvider muiTheme={theme}>
         <Router history={ browserHistory }>
-            <Route exact path="/" component={ GlobalForm }/>
-            <Route path="/ordonnance" component={ addMolecules }/>
-            <Route path="/ordonnance/test" component={ addMolecules }/>
+            <Route path="/" component={ GlobalForm }/>
+            <Route path="/ordonnance/:ordonnanceId/molecules" component={ addMolecules }/>
         </Router>
       </MuiThemeProvider>
       );

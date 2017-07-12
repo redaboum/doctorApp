@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import TextInput from './components/TextInput';
 import SelectInput from './components/SelectInput';
-import RaisedButton from 'material-ui/RaisedButton';
-const style = {
-  margin: 12,
-};
+
 
 class LowForm extends Component {
   constructor(props) {
@@ -12,9 +9,10 @@ class LowForm extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
-      <div>
-          <TextInput indicator="Titre"/>
+      <div style={{margin: 50}}>
+          <TextInput setFunction={this.props.setFunction} indicator="Titre"/>
           <div style={{display: "flex"}}>
             <SelectInput indicator="DCI"/>
             <TextInput indicator="Dose"  />
@@ -27,7 +25,6 @@ class LowForm extends Component {
             <TextInput indicator="Durée en jour"/>
           </div>
           <TextInput indicator="Commentaire"/>
-          <RaisedButton label="Ajouter une molécule" primary={true} style={style}/>
       </div>
     );
   }
