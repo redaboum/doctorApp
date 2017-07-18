@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useRouterHistory, Router, Route, browserHistory, IndexRoute, Switch } from 'react-router'
+import { useRouterHistory, Router, Route, browserHistory, IndexRoute, hashHistory } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createHistory } from 'history';
 
@@ -13,7 +13,7 @@ class App extends Component{
   render(){
     return (
       <MuiThemeProvider muiTheme={theme}>
-        <Router history={ browserHistory }>
+        <Router history={ hashHistory }>
             <Route path="/" component={ Root }>
               <IndexRoute component={ Home } />
               <Route path="create/pathologie" component={ GlobalForm } />
