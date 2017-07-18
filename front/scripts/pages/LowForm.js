@@ -9,7 +9,6 @@ class LowForm extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div style={{margin: 50}}>
           <TextInput setFunction={this.props.setFunction} indicator="Titre"/>

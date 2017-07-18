@@ -27,7 +27,6 @@ class HighForm extends Component {
 	};
 
 	setPathology = (pathology) => {
-		console.log(pathology.target.value);
 		this.setState({pathology: pathology.target.value});
 	};
 
@@ -46,13 +45,9 @@ class HighForm extends Component {
 			this.state.clinical,
 			this.state.recommendation,
 		 	this.state.id, this.props.router);
-		// console.log(this.state.id);
-		// this.props.router.push("/ordonnance/123/molecules");
 	};
 
 	render() {
-		console.log(this.state.speciality);
-		console.log(this.state.clinical);
 		return (
 			<div>
 					<SelectInput indicator="Spécialité" setFunction={this.setSpeciality}/>
