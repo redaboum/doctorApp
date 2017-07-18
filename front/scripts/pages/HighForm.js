@@ -50,7 +50,7 @@ class HighForm extends Component {
 	render() {
 		return (
 			<div>
-					<SelectInput indicator="Spécialité" setFunction={this.setSpeciality}/>
+					<SelectInput indicator="Spécialité" setFunction={this.setSpeciality} elements={this.props.specialities}/>
 					<TextInput indicator="Pathologie" setFunction={this.setPathology} />
 					<TextInput indicator="Présentation clinique" setFunction={this.setClinical} />
 					<TextInput indicator="Recommendation pour la prise en charge" style={{width: 700}} multiLine={true} setFunction={this.setRecommendation} />

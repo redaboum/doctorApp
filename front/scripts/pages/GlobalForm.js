@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HighForm from './HighForm'
 import LowForm from './LowForm'
 import RaisedButton from 'material-ui/RaisedButton';
+import specialities from '../assets/data/specialities'
 
 
 
@@ -20,7 +21,7 @@ class GlobalForm extends Component {
   render() {
     return (
       <div>
-        <HighForm />
+        <HighForm specialities={specialities} />
       </div>
     );
   }

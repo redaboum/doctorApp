@@ -35,11 +35,7 @@ export default class SelectFieldCustom extends Component {
           onChange={this.handleChange.bind(this)}
           style = {{marginLeft: 15}}
         >
-          <MenuItem value={1} primaryText="Never" />
-          <MenuItem value={2} primaryText="Every Night" />
-          <MenuItem value={3} primaryText="Weeknights" />
-          <MenuItem value={4} primaryText="Weekends" />
-          <MenuItem value={5} primaryText="Weekly" />
+          {this.props.elements.map((elt, index) => <MenuItem value={index} key={index} primaryText={elt} />)}
         </SelectField>
       </div>
     );
