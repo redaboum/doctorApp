@@ -13,13 +13,13 @@ class LowForm extends Component {
       <div style={{margin: 50}}>
           <TextInput setFunction={this.props.setFunction} indicator="Titre"/>
           <div style={{display: "flex"}}>
-            <SelectInput indicator="DCI"/>
+            <SelectInput indicator="DCI" elements={["test1", "test2"]}/>
             <TextInput indicator="Dose"  />
-            <SelectInput indicator="Forme Galiénique"/>
+            <SelectInput indicator="Forme Galiénique" elements={["test1", "test2"]}/>
           </div>
           <div style={{display: "flex"}}>
             <TextInput indicator="Nombre"/>
-            <SelectInput indicator="Forme galiénique"  />
+            <SelectInput indicator="Forme galiénique" elements={["test1", "test2"]}  />
             <TextInput indicator="Nombre de prise"/>
             <TextInput indicator="Durée en jour"/>
           </div>
