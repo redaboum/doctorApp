@@ -49,48 +49,52 @@ class Navbar extends Component {
 
   render() {
     return (
-      <AppBar
-        style={styles.nav}
-        showMenuIconButton={false}
-        title="Ordonnance"
-        titleStyle={styles.navTitle}
-        onTitleTouchTap={this.returnHome}
-      >
-        <Tabs
-          value={this.props.location.pathname}
-          style={styles.tabsStyle}
-          inkBarStyle={styles.tabInkBarStyle}
+      <div>
+        <AppBar
+          style={styles.nav}
+          showMenuIconButton={false}
+          title="Ordonnance"
+          titleStyle={styles.navTitle}
+          onTitleTouchTap={this.returnHome}
         >
-          <Tab
-            style={styles.tabStyle}
-            buttonStyle={styles.tabButtonStyle}
-            label="Créer pathologie"
-            value="/create/pathologie"
-            containerElement={<Link to="/create/pathologie" />}
-          />
-          <Tab
-            style={styles.tabStyle}
-            buttonStyle={styles.tabButtonStyle}
-            label="Créer ordonnance"
-            value="/create/ordonnance"
-            containerElement={<Link to="/create/ordonnance" />}
-          />
-          <Tab
-            style={styles.tabStyle}
-            buttonStyle={styles.tabButtonStyle}
-            label="Chercher pathologie"
-            value="/search/pathologie"
-            containerElement={<Link to="/search/pathologie" />}
-          />
-          <Tab
-            style={styles.tabStyle}
-            buttonStyle={styles.tabButtonStyle}
-            label="Chercher ordonnance"
-            value="/search/ordonnance"
-            containerElement={<Link to="/search/ordonnance" />}
-          />
-        </Tabs>
-      </AppBar>
+          <Tabs
+            value={this.props.location.pathname}
+            style={styles.tabsStyle}
+            inkBarStyle={styles.tabInkBarStyle}
+          >
+            <Tab
+              style={styles.tabStyle}
+              buttonStyle={styles.tabButtonStyle}
+              label="Créer pathologie"
+              value="/create/pathologie"
+              containerElement={<Link to="/create/pathologie" />}
+            />
+            <Tab
+              style={styles.tabStyle}
+              buttonStyle={styles.tabButtonStyle}
+              label="Créer ordonnance"
+              value="/create/ordonnance"
+              containerElement={<Link to="/create/ordonnance" />}
+            />
+            <Tab
+              style={styles.tabStyle}
+              buttonStyle={styles.tabButtonStyle}
+              label="Chercher pathologie"
+              value="/search/pathologie"
+              containerElement={<Link to="/search/pathologie" />}
+            />
+            <Tab
+              style={styles.tabStyle}
+              buttonStyle={styles.tabButtonStyle}
+              label="Chercher ordonnance"
+              value="/search/ordonnance"
+              containerElement={<Link to="/search/ordonnance" />}
+            />
+          </Tabs>
+        </AppBar>
+        {this.props.children}
+      </div>
+
     );
   }
 }

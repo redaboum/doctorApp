@@ -14,12 +14,13 @@ class App extends Component{
     return (
       <MuiThemeProvider muiTheme={theme}>
         <Router history={ browserHistory }>
-            <Route path="/" component={ Root }/>
-            <IndexRoute component={ Home } />
-            <Route path="create/pathologie" component={ GlobalForm } />
-            <Route path="create/ordonnance" component={ addMolecules } />
-            <Route path="search/pathologie" component={ GlobalForm } />
-            <Route path="search/ordonnance" component={ GlobalForm } />
+            <Route path="/" component={ Root }>
+              <IndexRoute component={ Home } />
+              <Route path="create/pathologie" component={ GlobalForm } />
+              <Route path="create/ordonnance" component={ addMolecules } />
+              <Route path="search/pathologie" component={ GlobalForm } />
+              <Route path="search/ordonnance" component={ GlobalForm } />
+            </Route>
         </Router>
       </MuiThemeProvider>
       );
