@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextInput from './components/TextInput';
 import SelectInput from './components/SelectInput';
+import molecules from '../assets/data/molecules'
 
 
 class LowForm extends Component {
@@ -9,9 +10,9 @@ class LowForm extends Component {
   }
 
   render() {
+    console.log(molecules);
     return (
-      <div style={{margin: 50}}>
-          <TextInput setFunction={this.props.setFunction} indicator="Titre"/>
+      <div>
           <div style={{display: "flex"}}>
             <SelectInput indicator="DCI" elements={["test1", "test2"]}/>
             <TextInput indicator="Dose"  />
