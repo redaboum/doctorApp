@@ -2,7 +2,10 @@ front-start:
 	cd front && yarn start
 
 back-start:
-	cd back && yarn start
+	 sudo docker run -it -p 8000:8000 -v ~/Desktop/doctorApp/:/home django bash -c "cd home && cd back && python manage.py runserver 0.0.0.0:8000"
+
+back-start-daemon:
+	 sudo docker run -itd -p 8000:8000 -v ~/Desktop/doctorApp/:/home django bash -c "cd home && cd back && python manage.py runserver 0.0.0.0:8000"
 
 database-start:
 	sudo docker run -p 27017:27017 -v /../database:/data/db -d mongo mongod --auth
