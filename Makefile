@@ -2,7 +2,7 @@ front-start:
 	cd front && yarn start
 
 back-start:
-	 sudo docker run -itd -name django reda/django -p 3000:3000 -v ~/Desktop/doctorApp/:/home bash -c "cd home && cd back && python manage.py runserver 0.0.0.0:3000"
+	 sudo docker run -itd -n reda/django -p 3000:3000 -v ~/Desktop/doctorApp/:/home bash -c "cd home && cd back && python manage.py runserver 0.0.0.0:3000"
 
 back-start-daemon:
 	 sudo docker run -itd -p 3000:3000 -v /home/ubuntu/doctorApp:/home django bash -c "cd home && cd back && python manage.py runserver 0.0.0.0:3000"
