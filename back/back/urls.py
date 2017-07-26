@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
 from django.conf.urls import url
 from django.contrib import admin
-from views.test import test
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+import json
+
+def test(request):
+  return HttpResponse(json.dumps({"coucou": "reda"}), content_type="application/json")
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
