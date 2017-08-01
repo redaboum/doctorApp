@@ -16,9 +16,10 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib import admin
-from back.views.pathology import get
+from back.views.pathology import get, post
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get),
+    url(r'^api/ordonnance-post$', post),
 ]

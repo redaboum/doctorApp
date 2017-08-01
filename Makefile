@@ -2,7 +2,7 @@ front-start:
 	cd front && yarn start
 
 back-start:
-	 sudo docker run -it -p 3000:3000 -v ~/Desktop/doctorApp/:/home django bash -c "cd home && cd back && python manage.py migrate --run-syncdb && python manage.py runserver 0.0.0.0:3000"
+	 sudo docker run -it -p 3000:3000 -v ~/Desktop/doctorApp/:/home django bash -c "pip install django-cors-headers && cd home && cd back && python manage.py migrate --run-syncdb && python manage.py runserver 0.0.0.0:3000"
 
 back-start-daemon:
 	 sudo docker run -itd -p 3000:3000  -v /home/ubuntu/doctorApp:/home --name reda django bash -c "cd home && cd back && python manage.py migrate --run-syncdb && python manage.py runserver 0.0.0.0:3000"

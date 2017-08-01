@@ -18,7 +18,6 @@ class HighForm extends Component {
 			pathology: null,
 			clinical: null,
 			recommendation: null,
-			id: null,
 		}
 	}
 
@@ -39,12 +38,12 @@ class HighForm extends Component {
 	};
 
 	clickNext = () => {
+		console.log(this.state.speciality);
 		postOrdonnance(
 			this.state.speciality,
 			this.state.pathology,
 			this.state.clinical,
-			this.state.recommendation,
-		 	this.state.id, this.props.router);
+			this.state.recommendation);
 	};
 
 	render() {

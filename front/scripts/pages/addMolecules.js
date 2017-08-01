@@ -60,7 +60,6 @@ class addMolecules extends Component {
   }
 
   render() {
-    console.log(this.state.value);
     return (
       <div>
           <h2> Soumettre Une Ordonnance </h2>

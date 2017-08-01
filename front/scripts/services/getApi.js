@@ -1,17 +1,16 @@
 import axios from 'axios';
+import querystring from 'querystring';
 
-const apiBaseUrl = 'http://ec2-54-200-64-111.us-west-2.compute.amazonaws.com:3000/api/'
+const apiBaseUrl = 'http://ec2-54-200-64-111.us-west-2.compute.amazonaws.com/api/'
 
-export const postOrdonnance = (speciality, pathology, clinicalP, Recommandation, id, router) =>{
-  console.log("tag");
-  axios.post(apiBaseUrl + 'Ordonnances', {
+export const postOrdonnance = (speciality, pathology, clinicalP, Recommandation) =>{
+  axios.post(apiBaseUrl + 'ordonnance-post', querystring.stringify({
       speciality: speciality,
       pathology: pathology,
       clinicalPresentation: clinicalP,
       Recommandation: Recommandation,
-  }).then((response) => {
-  	console.log("fin tag");
-  	id = response.data.id;
-  	router.push("/ordonnance/" + id + "/molecules");
+  })).then((response) => {
+    console.log(response.data);
+  	return response.data;
   });
 }
