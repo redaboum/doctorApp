@@ -38,7 +38,6 @@ class HighForm extends Component {
 	};
 
 	clickNext = () => {
-		console.log(this.state.speciality);
 		postOrdonnance(
 			this.state.speciality,
 			this.state.pathology,
