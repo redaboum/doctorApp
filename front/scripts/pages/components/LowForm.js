@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TextInput from './components/TextInput';
-import SelectInput from './components/SelectInput';
-import molecules from '../assets/data/molecules'
+import TextInput from './TextInput';
+import SelectInput from './SelectInput';
+import molecules from '../../assets/data/molecules'
 
 
 class LowForm extends Component {
@@ -10,7 +10,6 @@ class LowForm extends Component {
   }
 
   render() {
-    console.log(molecules);
     return (
       <div>
           <div style={{display: "flex"}}>

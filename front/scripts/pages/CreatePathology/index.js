@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import HighForm from './HighForm'
-import LowForm from './LowForm'
+import HighForm from '../components/HighForm'
+import LowForm from '../components/LowForm'
 import RaisedButton from 'material-ui/RaisedButton';
-import specialities from '../assets/data/specialities'
+import specialities from '../../assets/data/specialities'
 
 
 

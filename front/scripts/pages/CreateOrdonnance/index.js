@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import LowForm from './LowForm';
+import LowForm from '../components/LowForm';
 import RaisedButton from 'material-ui/RaisedButton';
-import TextInput from './components/TextInput';
-import SelectInput from './components/SelectInput';
+import TextInput from '../components/TextInput';
+import SelectInput from '../components/SelectInput';
 
 const style = {
   margin: 12,

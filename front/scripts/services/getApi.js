@@ -1,7 +1,7 @@
 import axios from 'axios';
 import querystring from 'querystring';
 
-const apiBaseUrl = 'http://ec2-54-200-64-111.us-west-2.compute.amazonaws.com/api/'
+const apiBaseUrl = 'http://ec2-54-200-64-111.us-west-2.compute.amazonaws.com:3000/api/'
 
 export const postOrdonnance = (speciality, pathology, clinicalP, Recommandation) =>{
   axios.post(apiBaseUrl + 'ordonnance-post', querystring.stringify({

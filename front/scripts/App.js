@@ -3,11 +3,11 @@ import { useRouterHistory, Router, Route, browserHistory, IndexRoute, hashHistor
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createHistory } from 'history';
 
-import theme from './theme';
-import GlobalForm from './pages/GlobalForm';
-import addMolecules from './pages/addMolecules';
+import CreatePathology from './pages/CreatePathology';
+import CreateOrdonnance from './pages/CreateOrdonnance';
 import Home from './pages/Home';
 import Root from './pages';
+import theme from './theme';
 
 class App extends Component{
   render(){
@@ -16,10 +16,10 @@ class App extends Component{
         <Router history={ hashHistory }>
             <Route path="/" component={ Root }>
               <IndexRoute component={ Home } />
-              <Route path="create/pathologie" component={ GlobalForm } />
-              <Route path="create/ordonnance" component={ addMolecules } />
-              <Route path="search/pathologie" component={ GlobalForm } />
-              <Route path="search/ordonnance" component={ GlobalForm } />
+              <Route path="create/pathologie" component={ CreatePathology } />
+              <Route path="create/ordonnance" component={ CreateOrdonnance } />
+              <Route path="search/pathologie" component={ CreatePathology } />
+              <Route path="search/ordonnance" component={ CreatePathology } />
             </Route>
         </Router>
       </MuiThemeProvider>

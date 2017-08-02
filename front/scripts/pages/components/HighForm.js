@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import TextInput from './components/TextInput';
-import SelectInput from './components/SelectInput';
+import TextInput from './TextInput';
+import SelectInput from './SelectInput';
 import RaisedButton from 'material-ui/RaisedButton';
-import { postOrdonnance } from '../services/getApi';
+import { postOrdonnance } from '../../services/getApi';
 import {withRouter} from "react-router";
 
 
